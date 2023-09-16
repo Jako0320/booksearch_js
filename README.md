@@ -3,7 +3,7 @@
 
 ## Description
 Search engine to allow users to search, save and view books.<br>
-undefined
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -17,14 +17,12 @@ undefined
 Run npm install
 
 ## Usage
-NA
+[Heroku link](https://booksearch-js-54f1066acef8.herokuapp.com/)
 
 ## License
 
   
-This application is covered under the None license. [License]( undefined )
-
-  undefined
+This application is not covered under any license. 
 
 
 ## Contributing
