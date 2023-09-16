@@ -8,7 +8,7 @@ export const getMe = (token) => {
   });
 };
 
-export const createUser = (userData) => {
+export const addUser = (userData) => {
   return fetch('/api/users', {
     method: 'POST',
     headers: {
@@ -29,7 +29,7 @@ export const loginUser = (userData) => {
 };
 
 // save book data for a logged in user
-export const saveBook = (bookData, token) => {
+export const addBook = (bookData, token) => {
   return fetch('/api/users', {
     method: 'PUT',
     headers: {
