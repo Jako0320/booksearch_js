@@ -4,7 +4,7 @@ const { signToken, AuthenticationError } = require("../utils/auth");
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find({});
+      return User.find().populate("savedBooks");
     },
     me: async (parent, args, context) => {
       if (context.user) {
@@ -51,7 +51,7 @@ const resolvers = {
       if (context.user) {
         const user = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $push: { savedBooks: args.bookToRemove } },
+          { $pull: { savedBooks: args.bookToRemove } },
           { new: true }
         );
         return user;
